@@ -29,7 +29,7 @@ def main():
         S_r = S_vals[L_idx, :]
         plt.plot(r_vals, S_r, color=colors[L_idx], label=f"L={L_val}", marker='o')
     plt.legend()
-    plt.show()
+    plt.savefig('./aggregate_entropy')
 
 
 if __name__ == '__main__':
