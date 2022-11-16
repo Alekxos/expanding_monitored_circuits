@@ -6,7 +6,6 @@ from values import r_vals, L_vals, num_repeats, t_max
 def read_single_S(filename):
     f = open(filename, "r")
     x = float(f.read())
-    print(f"x: {x}")
     return x
 
 def read_S_vals():
@@ -15,7 +14,7 @@ def read_S_vals():
         for L_idx, L in enumerate(L_vals):
             S_total = 0
             for repeat_idx in range(num_repeats):
-                filename = f"S_r{str(r).replace('.', '-')}_L{L}_n{repeat_idx}.txt"
+                filename = f"./output/S_r{str(r).replace('.', '-')}_L{L}_n{repeat_idx}.txt"
                 S_val = read_single_S(filename)
                 S_total += S_val
             S_total /= num_repeats

@@ -125,7 +125,7 @@ def main():
                     circuit.append(instruction)
     simulator.do_circuit(circuit)
     S_run = EntanglementEntropy(simulator, 2 + L // 4)
-    f = open(f"S_r{str(r).replace('.', '-')}_L{L}_n{n}.txt", "a")
+    f = open(f"./output/S_r{str(r).replace('.', '-')}_L{L}_n{n}.txt", "a")
     f.write(f"{S_run}")
     f.close()
     print(f"S: {S_run}")
